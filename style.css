@@ -1,0 +1,219 @@
+/* CSS RESET */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Fredoka", sans-serif;
+}
+
+/* Global Vars */
+:root {
+    --iconBorder: 1rem;
+}
+
+/* LAYOUT */
+.branding{
+position: absolute;
+left: 0px;
+bottom: 0px;
+overflow:hidden;
+
+}
+body{
+    background-color: #5A1E76;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border-radius: 10px;
+}
+    .container-lg{
+        background-color: #2B0040;
+        width: 50vh;
+        height: 65vh;
+        border-radius: 3rem;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 0.575fr 0.85fr 2.5fr 1fr 0.575fr;
+        grid-template-areas: 
+        ". . . . ."
+        ". top top top ."
+        ". cells cells cells . "
+        ". cta cta cta .";
+        row-gap: 2rem;
+        
+    
+    }
+        .top-display{
+            display: grid;
+            grid-area: 
+            top;
+            grid-template-areas: 
+            "player1 player1 player1";
+            column-gap: 1.2rem;
+            
+            .playerxdisplay{
+                height: 100%;
+                gap: 20px;
+                grid-area: player1;
+                border-radius: var(--iconBorder);
+                display: flex;
+                flex-direction: column;
+
+                }
+
+                .playerxdisplay > * {
+                    display: flex;
+                }
+                    .turndisplay,.time-counter{
+                        flex: 1 1 auto;
+                    }
+
+                    .time-counter{
+                        justify-content: center;
+                        align-items: center;
+                    }
+                        .turndisplay{
+                            justify-content: center;
+                        align-items: center;
+                        }
+
+                        .time-counter > #counter-clock,.turndisplay > * {
+                            background-color: #FFFFFF;
+                            max-width: max-content;
+                            padding: 10px 30px 10px 30px;
+                            border-radius: 0.8rem;
+                            font-size: 1.6rem;
+                            font-weight: 600;
+                            text-align: center;
+                        }
+                
+        }
+            .cell-cntr{
+                grid-area: 
+                cells;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                column-gap: 1.2rem;
+                row-gap: 10px;
+                
+
+                    .cell {
+                        border-radius: 0.5rem;
+                        background-color: #43115B;
+                        font-size: 4.5rem;
+                        text-align: center;
+                        align-content: center;
+                        font-weight: bold;
+                        color: #FFFFFF;
+                    }
+                    .cell:hover{
+                        background-color: #5A1E76
+                    }
+
+                    
+            }
+
+            form#dialog{
+                grid-area: dialog;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+    align-items: center;
+    font-size: 1.6rem;
+    gap: 1rem;
+    background-color: #43115B;
+    justify-content: center;
+    border-radius: var(--iconBorder);
+    padding: 3rem;
+
+
+    input#playerTwoName,input#playerOneName{
+        width: 80%;
+        border-radius: var(--iconBorder);
+        min-height: 3rem;
+        font-size: 1.75rem;
+        padding: 10px;
+        outline:none;
+        
+    }
+
+    input#playerTwoName,input#playerOneName:focus{
+        outline:none;
+        
+
+        
+    }
+
+    button#startgame{
+        background-color: #F4F6F5;
+        
+                    color: #000000;
+                    border-radius: 1rem;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    border: none;
+                    padding: 1rem 1.5rem;
+    }
+
+            }
+                .cta-view{
+                    grid-area: 
+            cta;
+            display: grid;
+            grid-template-areas: "."
+            " reset "
+            ".";
+    
+
+                    button#reset{
+                        background-color: #F4F6F5;
+            
+                        color: #000000;
+                        border-radius: 1rem;
+                        grid-area: reset;
+                        font-size: 1.4rem;
+                        font-weight: bold;
+                        border: none;
+                    }
+                    button#reset:hover{
+                        background-color: #C5A0D7;
+                        text-decoration: underline;
+                    }
+                }
+
+
+                /* Media Querys */
+                @media screen and (max-width: 1660px) {
+                    img#\#Brand {
+                      height: 200px!important;
+                    }
+                  }
+
+                  @media screen and (max-width: 1000px) {
+                    img#\#Brand {
+                      height: 150px!important;
+                    }
+                  }
+                  @media screen and (max-width: 650px) {
+                    .container-lg  {
+                      width: fit-content;
+        
+                  }
+                  .playerxdisplay > * {
+                    font-size: 10px!important;
+                }
+            
+            
+            
+                form#dialog {
+                    font-size: 0.8rem!important;
+                }}
+            
+                
+                

@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <!-- FONTS -->
     <!-- LINK JS -->
      <script src="./index.js" defer></script>
      <!--  Link CSS -->
@@ -10,6 +14,45 @@
     <title>Document</title>
 </head>
 <body>
-    
+  <span class="branding">
+    <img src="./imgs/tic. tac.toe..svg" alt="Tic-Tac-Toe-Branding" height="400px" id="#Brand">
+  </span>
+  <!-- OVERLAYS -->
+  <div class="container-lg">
+    <div class="top-display" style="display: none;">
+      <div class="playerxdisplay">
+            <div class="time-counter">
+                <p id="counter-clock"></p>
+            </div>
+            <div class="turndisplay">
+                <p id="show-turn">Player 1's Turn</p>
+            </div>
+      </div>
+       </div>
+    <div class="cell-cntr">
+      <div class="cell" rowIndex = 0 columIndex = 0></div>
+      <div class="cell" rowIndex = 0 columIndex = 1></div>
+      <div class="cell" rowIndex = 0 columIndex = 2></div>
+      <div class="cell" rowIndex = 1 columIndex = 0></div>
+      <div class="cell" rowIndex = 1 columIndex = 1></div>
+      <div class="cell" rowIndex = 1 columIndex = 2></div>
+      <div class="cell" rowIndex = 2 columIndex = 0></div>
+      <div class="cell" rowIndex = 2 columIndex = 1></div>
+      <div class="cell" rowIndex = 2 columIndex = 2></div>
+       </div>
+       <form action="#" id="dialog">
+          <label for="playerOneName">Player One ID</label>
+          <input type="text" id="playerOneName" name="playerOneName">
+          <span>Marker: <label for="playerOneMarker" id="markerP1">X</label></span>
+
+          <label for="playerTwoName">Player Two ID</label>
+          <input type="text" id="playerTwoName" name="playerTwoName">
+          <span>Marker:<label for="playerTwoMarker" id="markerP2">O</label></span>
+        <button id="startgame">Start Game</button>
+       </form>
+       <div class="cta-view" style="display: none;">
+          <button id="reset">New Game</button>
+       </div>
+  </div>
 </body>
 </html>
